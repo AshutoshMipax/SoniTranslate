@@ -1,13 +1,12 @@
 [{
   "method": "shell.run",
   "params": {
-    "message": "git clone https://github.com/R3gm/SoniTranslate.git app"
+    "message": "git clone https://github.com/R3gm/SoniTranslate.git ."
   }
 }, {
   "method": "shell.run",
   "params": {
     "venv": "env",
-    "path": "app",
     "message": [
       "pip install torch torchvision torchaudio --force-reinstall --index-url https://download.pytorch.org/whl/cu118",
       "pip install -r requirements.txt"
@@ -16,13 +15,13 @@
 }, {
   "method": "fs.link",
   "params": {
-    "path": "app/weights",
+    "path": "weights",
     "to": "weights"
   }
 }, {
   "method": "fs.link",
   "params": {
-    "path": "app/_XTTS_",
+    "path": "_XTTS_",
     "to": "_XTTS_"
   }
 }, {
